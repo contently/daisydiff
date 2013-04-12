@@ -11,8 +11,7 @@ module DaisyDiff
       file_2 = create_tempfile('html_2', html_2)
       output_file = create_tempfile('html_diff')
 
-      # puts "FILE1 => #{file_1.read}"
-      line = ::Cocaine::CommandLine.new("java", "-jar :jar_path :file_1_path :file_2_path --file=:output_file_path")
+      line = Cocaine::CommandLine.new("java", "-jar :jar_path :file_1_path :file_2_path --file=:output_file_path")
       # puts line.command
       line.run(:jar_path => File.expand_path(File.dirname(__FILE__) + '/daisydiff/daisydiff.jar'), :file_1_path => file_1.path, :file_2_path => file_2.path, :output_file_path => output_file.path)
 
