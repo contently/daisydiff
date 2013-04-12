@@ -1,4 +1,5 @@
-require "daisydiff/version"
+require 'daisydiff/version'
+require 'daisydiff/result'
 require 'tempfile'
 require 'cocaine'
 
@@ -17,7 +18,7 @@ module DaisyDiff
 
       results = output_file.read
     # rescue
-      #handle the error here
+      #handle the error here?
     ensure
       close_tempfile file_1
       close_tempfile file_2
