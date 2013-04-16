@@ -1,3 +1,5 @@
+require 'nokogiri'
+
 class DaisyDiff::Result
 
   attr_reader :html
