@@ -1,6 +1,6 @@
-# Daisydiff
+# Daisy Diff Wrapper
 
-TODO: Write a gem description
+A simple wrapper around [DaisyDiff](https://code.google.com/p/daisydiff/) HTML parser. (Requires Java)
 
 ## Installation
 
