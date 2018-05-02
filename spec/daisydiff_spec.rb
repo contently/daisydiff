@@ -1,7 +1,7 @@
 # require File.expand_path(File.dirname(__FILE__) + '/spec_helper')
 require 'spec_helper'
 
-require 'cocaine'
+require 'terrapin'
 require 'ruby-prof'
 require 'benchmark'
 
@@ -30,7 +30,7 @@ describe "DaisyDiff" do
     puts "BEFORE: #{before}"
 
     Benchmark.bm do |x|
-       x.report("diff") { 
+       x.report("diff") {
         100.times {
           benchmark_test(file_1, file_2)
         }
@@ -57,7 +57,7 @@ describe "DaisyDiff" do
 
   def benchmark_test(file_1, file_2)
     output_file = Tempfile.new('example_1_diff.html')
-    line = Cocaine::CommandLine.new("java", "-jar :jar_path :file_1_path :file_2_path --file=:output_file_path")
+    line = Terrapin::CommandLine.new("java", "-jar :jar_path :file_1_path :file_2_path --file=:output_file_path")
     line.run(:jar_path => File.expand_path(File.dirname(__FILE__) + '/../lib/daisydiff/daisydiff.jar'), :file_1_path => file_1.path, :file_2_path => file_2.path, :output_file_path => output_file.path)
   end
 
