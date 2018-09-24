@@ -1,4 +1,6 @@
-# Daisy Diff Wrapper
+# Daisy Diff Wrapper [DEPRECATED]
+
+**The gem is no longer supported nor in use at Contently. The [HTML Diff service](https://github.com/contently/html-diff-service) is recommended for use instead.**
 
 A simple wrapper around [DaisyDiff](https://code.google.com/p/daisydiff/) HTML parser. (Requires Java)
 
